@@ -1,0 +1,193 @@
+<html><head><base href="https://newelevationoffaith.org/video">
+<title>NEW ELEVATION OF FAITH ONLINE FELLOWSHIP - Video Library</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
+    header {
+        background: linear-gradient(to right, #3498db, #2c3e50);
+        color: #fff;
+        text-align: center;
+        padding: 1rem;
+    }
+    nav {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 0.5rem;
+    }
+    nav a {
+        color: #fff;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+    }
+    nav a:hover {
+        background-color: #555;
+    }
+    main {
+        padding: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 1rem;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+    }
+    .video-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 2rem;
+    }
+    .video-item {
+        background-color: #f9f9f9;
+        border-radius: 5px;
+        overflow: hidden;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .video-thumbnail {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+    .video-info {
+        padding: 1rem;
+    }
+    .video-title {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+    .video-description {
+        font-size: 0.9rem;
+        color: #666;
+    }
+    .search-container {
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+    #search-input {
+        padding: 0.5rem;
+        width: 300px;
+        font-size: 1rem;
+    }
+    #search-button {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        background-color: #3498db;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+    #search-button:hover {
+        background-color: #2980b9;
+    }
+</style>
+</head>
+<body>
+    <header>
+        <h1>NEW ELEVATION OF FAITH ONLINE FELLOWSHIP</h1>
+    </header>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/contact">Contact</a>
+        <a href="/video">Video</a>
+        <a href="/live">Live Stream</a>
+        <a href="/gatherings">Live Gatherings</a>
+    </nav>
+    <main>
+        <h2>Video Library</h2>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search videos...">
+            <button id="search-button">Search</button>
+        </div>
+        <div class="video-grid" id="video-grid">
+            <!-- Video items will be dynamically added here -->
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 NEW ELEVATION OF FAITH ONLINE FELLOWSHIP. All rights reserved.</p>
+    </footer>
+    <script>
+        const videoData = [
+            {
+                title: "Finding Your Purpose in Faith",
+                description: "Pastor Sarah explores the journey of discovering your God-given purpose.",
+                thumbnail: "https://newelevationoffaith.org/thumbnails/purpose_in_faith.jpg"
+            },
+            {
+                title: "The Power of Community",
+                description: "Elder John discusses the importance of fellowship in our spiritual growth.",
+                thumbnail: "https://newelevationoffaith.org/thumbnails/power_of_community.jpg"
+            },
+            {
+                title: "Overcoming Adversity Through Prayer",
+                description: "Guest speaker Dr. Michael Johnson shares his testimony of healing and hope.",
+                thumbnail: "https://newelevationoffaith.org/thumbnails/overcoming_adversity.jpg"
+            },
+            {
+                title: "Youth Night: Living Your Faith",
+                description: "Our youth pastor leads an engaging discussion on faith in daily life.",
+                thumbnail: "https://newelevationoffaith.org/thumbnails/youth_night.jpg"
+            },
+            {
+                title: "Worship Night Highlights",
+                description: "Experience the joy and power of our recent worship night.",
+                thumbnail: "https://newelevationoffaith.org/thumbnails/worship_night.jpg"
+            },
+            {
+                title: "Bible Study: The Book of Acts",
+                description: "Part 1 of our in-depth study on the early Christian church.",
+                thumbnail: "https://newelevationoffaith.org/thumbnails/bible_study_acts.jpg"
+            }
+        ];
+
+        function createVideoElement(video) {
+            return `
+                <div class="video-item">
+                    <img class="video-thumbnail" src="${video.thumbnail}" alt="${video.title}" width="300" height="200">
+                    <div class="video-info">
+                        <h3 class="video-title">${video.title}</h3>
+                        <p class="video-description">${video.description}</p>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderVideos(videos) {
+            const videoGrid = document.getElementById('video-grid');
+            videoGrid.innerHTML = videos.map(createVideoElement).join('');
+        }
+
+        function searchVideos() {
+            const searchTerm = document.getElementById('search-input').value.toLowerCase();
+            const filteredVideos = videoData.filter(video => 
+                video.title.toLowerCase().includes(searchTerm) || 
+                video.description.toLowerCase().includes(searchTerm)
+            );
+            renderVideos(filteredVideos);
+        }
+
+        document.getElementById('search-button').addEventListener('click', searchVideos);
+        document.getElementById('search-input').addEventListener('keyup', function(event) {
+            if (event.key === 'Enter') {
+                searchVideos();
+            }
+        });
+
+        // Initial render
+        renderVideos(videoData);
+    </script>
+</body>
+</html>

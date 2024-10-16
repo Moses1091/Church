@@ -1,0 +1,275 @@
+<html><head><base href="https://newelevationoffaith.org/gatherings">
+<title>NEW ELEVATION OF FAITH ONLINE FELLOWSHIP - Live Gatherings</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    body {
+        font-family: 'Roboto', sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        color: #333;
+    }
+    header {
+        background: linear-gradient(135deg, #3498db, #8e44ad);
+        color: #fff;
+        text-align: center;
+        padding: 2rem 0;
+        position: relative;
+        overflow: hidden;
+    }
+    header::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('https://newelevationoffaith.org/images/header-bg.svg') no-repeat center center;
+        background-size: cover;
+        opacity: 0.1;
+        z-index: 0;
+    }
+    header h1 {
+        font-size: 2.5rem;
+        margin: 0;
+        position: relative;
+        z-index: 1;
+    }
+    nav {
+        background-color: #2c3e50;
+        padding: 1rem 0;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+    }
+    nav ul li {
+        margin: 0 1rem;
+    }
+    nav a {
+        color: #ecf0f1;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s ease;
+    }
+    nav a:hover {
+        color: #3498db;
+    }
+    main {
+        max-width: 1000px;
+        margin: 2rem auto;
+        padding: 0 2rem;
+    }
+    .gatherings-container {
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 2rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+        color: #2c3e50;
+        margin-bottom: 1.5rem;
+    }
+    .gathering-info {
+        margin-bottom: 2rem;
+    }
+    .gathering-info h3 {
+        color: #3498db;
+        margin-bottom: 0.5rem;
+    }
+    .gathering-info p {
+        margin-bottom: 0.5rem;
+    }
+    .map-container {
+        margin-top: 2rem;
+    }
+    .map-container iframe {
+        width: 100%;
+        height: 400px;
+        border: none;
+        border-radius: 10px;
+    }
+    .info-tabs {
+        margin-top: 2rem;
+    }
+    .tab-buttons {
+        display: flex;
+        margin-bottom: 1rem;
+    }
+    .tab-button {
+        background-color: #ecf0f1;
+        border: none;
+        padding: 0.8rem 1.5rem;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: background-color 0.3s ease;
+    }
+    .tab-button.active {
+        background-color: #3498db;
+        color: #fff;
+    }
+    .tab-content {
+        background-color: #ecf0f1;
+        padding: 1.5rem;
+        border-radius: 0 0 10px 10px;
+    }
+    .tab-pane {
+        display: none;
+    }
+    .tab-pane.active {
+        display: block;
+    }
+    footer {
+        background-color: #2c3e50;
+        color: #ecf0f1;
+        text-align: center;
+        padding: 2rem 0;
+        margin-top: 2rem;
+    }
+    .social-links {
+        margin-top: 1rem;
+    }
+    .social-links a {
+        color: #ecf0f1;
+        font-size: 1.5rem;
+        margin: 0 0.5rem;
+        transition: color 0.3s ease;
+    }
+    .social-links a:hover {
+        color: #3498db;
+    }
+    @media (max-width: 768px) {
+        header h1 {
+            font-size: 2rem;
+        }
+        nav ul {
+            flex-direction: column;
+            align-items: center;
+        }
+        nav ul li {
+            margin: 0.5rem 0;
+        }
+        .tab-buttons {
+            flex-direction: column;
+        }
+        .tab-button {
+            width: 100%;
+            margin-bottom: 0.5rem;
+        }
+    }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>NEW ELEVATION OF FAITH ONLINE FELLOWSHIP</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/video">Video</a></li>
+            <li><a href="/live">Live Stream</a></li>
+            <li><a href="/gatherings">Live Gatherings</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="gatherings-container">
+            <h2>Live Gatherings Information</h2>
+            <div class="gathering-info">
+                <h3>Weekly Service</h3>
+                <p><strong>Day:</strong> Every Sunday</p>
+                <p><strong>Time:</strong> 10:00 AM - 12:00 PM</p>
+                <p><strong>Location:</strong> Elevation Community Center, 456 Faith Street, Spiritual City, SC 12345</p>
+            </div>
+            <div class="gathering-info">
+                <h3>Midweek Prayer Meeting</h3>
+                <p><strong>Day:</strong> Every Wednesday</p>
+                <p><strong>Time:</strong> 7:00 PM - 8:30 PM</p>
+                <p><strong>Location:</strong> Elevation Community Center, 456 Faith Street, Spiritual City, SC 12345</p>
+            </div>
+            <div class="map-container">
+                <h3>Location Map</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3305.7152203498374!2d-118.2453649!3d34.0522342!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c75ddc27da13%3A0xe22fdf6f254608f4!2sLos%20Angeles%2C%20CA!5e0!3m2!1sen!2sus!4v1656522387320!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div class="info-tabs">
+                <div class="tab-buttons">
+                    <button class="tab-button active" data-tab="what-to-expect">What to Expect</button>
+                    <button class="tab-button" data-tab="parking">Parking Information</button>
+                    <button class="tab-button" data-tab="accessibility">Accessibility</button>
+                </div>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="what-to-expect">
+                        <h4>What to Expect</h4>
+                        <p>Our live gatherings are filled with vibrant worship, inspiring messages, and a welcoming community. You can expect:</p>
+                        <ul>
+                            <li>Warm greetings from our hospitality team</li>
+                            <li>Contemporary and traditional worship music</li>
+                            <li>Engaging and relevant sermons</li>
+                            <li>Opportunities for prayer and reflection</li>
+                            <li>Fellowship time after the service</li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane" id="parking">
+                        <h4>Parking Information</h4>
+                        <p>We offer free parking for all attendees:</p>
+                        <ul>
+                            <li>Main parking lot located directly behind the community center</li>
+                            <li>Additional street parking available on Faith Street and surrounding areas</li>
+                            <li>Handicap parking spaces available near the main entrance</li>
+                            <li>Bicycle racks provided for those who prefer to cycle</li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane" id="accessibility">
+                        <h4>Accessibility</h4>
+                        <p>We strive to make our gatherings accessible to everyone:</p>
+                        <ul>
+                            <li>Wheelchair ramps at all entrances</li>
+                            <li>Elevator access to all floors</li>
+                            <li>Assistive listening devices available upon request</li>
+                            <li>Sign language interpretation provided (please contact us in advance)</li>
+                            <li>Large print materials available</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 NEW ELEVATION OF FAITH ONLINE FELLOWSHIP. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://facebook.com/newelevationoffaith" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com/newelevationfaith" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com/newelevationoffaith" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://youtube.com/newelevationoffaith" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabPanes = document.querySelectorAll('.tab-pane');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const tabId = this.getAttribute('data-tab');
+
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    tabPanes.forEach(pane => pane.classList.remove('active'));
+
+                    this.classList.add('active');
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<html><head><base href="https://newelevationoffaith.org/"><title>NEW ELEVATION OF FAITH ONLINE FELLOWSHIP</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
+    header {
+        background: linear-gradient(to right, #3498db, #2c3e50);
+        color: #fff;
+        text-align: center;
+        padding: 1rem;
+    }
+    nav {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 0.5rem;
+    }
+    nav a {
+        color: #fff;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+    }
+    nav a:hover {
+        background-color: #555;
+    }
+    main {
+        padding: 2rem;
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 1rem;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+    .chatbot {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 1rem;
+        margin-top: 2rem;
+    }
+    #chatbox {
+        height: 300px;
+        overflow-y: scroll;
+        border: 1px solid #ddd;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+</style>
+</head>
+<body>
+    <header>
+        <h1>NEW ELEVATION OF FAITH ONLINE FELLOWSHIP</h1>
+    </header>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/contact">Contact</a>
+        <a href="/video">Video</a>
+        <a href="/live">Live Stream</a>
+    </nav>
+    <main>
+        <h2>Welcome to Our Online Fellowship</h2>
+        <p>Join us in our journey of faith, hope, and love. Our online community is dedicated to uplifting spirits and bringing people closer to their spiritual path.</p>
+        <h3>Upcoming Events</h3>
+        <ul>
+            <li><a href="/events/virtual-prayer-circle">Virtual Prayer Circle - Every Tuesday at 7 PM</a></li>
+            <li><a href="/events/online-bible-study">Online Bible Study - Wednesdays at 6 PM</a></li>
+            <li><a href="/events/youth-group-meetup">Youth Group Virtual Meetup - Fridays at 5 PM</a></li>
+        </ul>
+        <h3>Recent Sermons</h3>
+        <ul>
+            <li><a href="/sermons/finding-peace-in-chaos">Finding Peace in Chaos</a></li>
+            <li><a href="/sermons/the-power-of-forgiveness">The Power of Forgiveness</a></li>
+            <li><a href="/sermons/walking-in-faith">Walking in Faith</a></li>
+        </ul>
+        <div class="chatbot">
+            <h3>Chat with FaithBot</h3>
+            <div id="chatbox"></div>
+            <input type="text" id="user-input" placeholder="Ask FaithBot a question...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 NEW ELEVATION OF FAITH ONLINE FELLOWSHIP. All rights reserved.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        const chatbox = document.getElementById('chatbox');
+        const userInput = document.getElementById('user-input');
+
+        function sendMessage() {
+            const message = userInput.value;
+            if (message.trim() === '') return;
+
+            appendMessage('You', message);
+            userInput.value = '';
+
+            // Simulating AI response
+            setTimeout(() => {
+                const aiResponse = getFaithBotResponse(message);
+                appendMessage('FaithBot', aiResponse);
+            }, 1000);
+        }
+
+        function appendMessage(sender, message) {
+            const messageElement = document.createElement('p');
+            messageElement.innerHTML = `<strong>${sender}:</strong> ${message}`;
+            chatbox.appendChild(messageElement);
+            chatbox.scrollTop = chatbox.scrollHeight;
+        }
+
+        function getFaithBotResponse(message) {
+            const responses = [
+                "Faith is the substance of things hoped for, the evidence of things not seen. (Hebrews 11:1)",
+                "Let us hold unswervingly to the hope we profess, for he who promised is faithful. (Hebrews 10:23)",
+                "Trust in the LORD with all your heart and lean not on your own understanding. (Proverbs 3:5)",
+                "For I know the plans I have for you, declares the LORD, plans to prosper you and not to harm you, plans to give you hope and a future. (Jeremiah 29:11)",
+                "Cast all your anxiety on him because he cares for you. (1 Peter 5:7)"
+            ];
+            return responses[Math.floor(Math.random() * responses.length)];
+        }
+    </script>
+</body>
+</html>
